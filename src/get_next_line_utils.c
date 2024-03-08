@@ -6,12 +6,13 @@
 /*   By: sezequie <sezequie@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 15:19:38 by sezequie          #+#    #+#             */
-/*   Updated: 2024/02/12 15:42:21 by sezequie         ###   ########.fr       */
+/*   Updated: 2024/03/08 14:18:54 by sezequie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
+// Function to calculate the length of a string
 size_t	ft_strlen(const char *s)
 {
 	size_t	i;
@@ -25,6 +26,7 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
+// Function to concatenate two strings
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
@@ -46,6 +48,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (str);
 }
 
+// Function to duplicate a string
 char	*ft_strdup(const char *s1)
 {
 	char	*str;
@@ -61,6 +64,7 @@ char	*ft_strdup(const char *s1)
 	return (str);
 }
 
+// Function to extract a substring from a string
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
@@ -80,6 +84,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (str);
 }
 
+// Function to find the first occurrence of a character in a string
 char	*ft_strchr(const char *s, int c)
 {
 	size_t	i;
