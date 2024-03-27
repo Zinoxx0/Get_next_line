@@ -6,7 +6,7 @@
 /*   By: sezequie <sezequie@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 15:19:38 by sezequie          #+#    #+#             */
-/*   Updated: 2024/03/08 14:18:54 by sezequie         ###   ########.fr       */
+/*   Updated: 2024/03/27 15:02:42 by sezequie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,6 @@ char	*ft_strchr(const char *s, int c)
 
 	if (s == NULL)
 		return (NULL);
-
 	i = 0;
 	while (s[i])
 	{

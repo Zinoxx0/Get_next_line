@@ -6,14 +6,16 @@
 /*   By: sezequie <sezequie@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 15:15:01 by sezequie          #+#    #+#             */
-/*   Updated: 2024/03/08 14:04:58 by sezequie         ###   ########.fr       */
+/*   Updated: 2024/03/27 15:02:19 by sezequie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-// This function is used to protect the remaining part of the line after the newline character.
-// It takes the current line as input and returns the remaining part of the line.
+// This function is used to protect the remaining
+// part of the line after the newline character.
+// It takes the current line as input and returns
+// the remaining part of the line.
 char	*protects(char *get_line)
 {
 	size_t	i;
@@ -35,7 +37,8 @@ char	*protects(char *get_line)
 }
 
 // This function is used to read a line from the file descriptor.
-// It reads BUFFER_SIZE characters at a time and appends them to the 'hold' string.
+// It reads BUFFER_SIZE characters at a time and appends 
+//them to the 'hold' string.
 // It returns the 'hold' string after reading the entire line.
 char	*read_line(int fd, char *buffer, char *hold)
 {
@@ -63,7 +66,8 @@ char	*read_line(int fd, char *buffer, char *hold)
 	return (hold);
 }
 
-// This is the main function that reads the next line from the file descriptor.
+// This is the main function that reads the next line 
+//from the file descriptor.
 // It returns the next line as a string.
 char	*get_next_line(int fd)
 {
