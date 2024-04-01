@@ -6,16 +6,12 @@
 /*   By: sezequie <sezequie@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 15:15:01 by sezequie          #+#    #+#             */
-/*   Updated: 2024/03/27 15:02:19 by sezequie         ###   ########.fr       */
+/*   Updated: 2024/04/01 11:49:46 by sezequie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-// This function is used to protect the remaining
-// part of the line after the newline character.
-// It takes the current line as input and returns
-// the remaining part of the line.
 char	*protects(char *get_line)
 {
 	size_t	i;
@@ -36,10 +32,6 @@ char	*protects(char *get_line)
 	return (hold);
 }
 
-// This function is used to read a line from the file descriptor.
-// It reads BUFFER_SIZE characters at a time and appends 
-//them to the 'hold' string.
-// It returns the 'hold' string after reading the entire line.
 char	*read_line(int fd, char *buffer, char *hold)
 {
 	int		readline;
@@ -92,3 +84,32 @@ char	*get_next_line(int fd)
 	hold = protects(get_line);
 	return (get_line);
 }
+
+/*
+int main()
+{
+	int fd;
+	char *line = NULL;
+
+	fd = open("test.txt", O_RDONLY);
+	if (fd == -1)
+	{
+		perror("Error opening file");
+		return 1;
+	}
+	while ((line = get_next_line(fd)) != NULL)
+	{
+		printf("%s", line);
+		free(line);
+		line = NULL;
+	}
+	if (line != NULL)
+		free(line);
+	if (close(fd) == -1)
+	{
+		perror("Error closing file");
+		return 1;
+	}
+	return 0;
+}
+*/

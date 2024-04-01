@@ -6,16 +6,17 @@
 /*   By: sezequie <sezequie@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 15:19:41 by sezequie          #+#    #+#             */
-/*   Updated: 2023/11/14 15:32:49 by sezequie         ###   ########.fr       */
+/*   Updated: 2024/04/01 11:19:33 by sezequie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
+# include <fcntl.h>
+# include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
-# include <stdlib.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 10
