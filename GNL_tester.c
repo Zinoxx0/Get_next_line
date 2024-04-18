@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include <fcntl.h>
 #include <stdlib.h>
 #include "./src/get_next_line.h"
@@ -16,7 +17,10 @@ int main()
 	}
 	while ((line = get_next_line(fd)) != NULL)
 	{
-		printf("%s", line);
+		if (strcmp(line, "\n") == 0)
+			printf("\nthis was just a new line\n\n");
+		else
+			printf("This is one line;\n%s\n\n", line);
 		free(line);
 		line = NULL;
 	}
